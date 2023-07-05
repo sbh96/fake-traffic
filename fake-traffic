@@ -310,7 +310,10 @@ run_base_stats() {
     local tts
     tts=$(shuf -i 10-15 -n 1)
 
-
+    while :; do
+              echo -e "Run speedtest in upload mode with tts: $tts "
+              librespeed-cli --no-download  --concurrent 30  --simple --no-icmp --duration "$tts"
+        done
 #    if [[ "$result" -gt 10 ]]; then
 ##        echo -e "Download mode"
 #        echo -e "Run speedtest in download mode with tts: $tts "
@@ -320,10 +323,7 @@ run_base_stats() {
 #    if [[ "$result" -lt 10 ]]; then
 #        #        echo -e "Upload mode"
 
-        while :; do
-              echo -e "Run speedtest in upload mode with tts: $tts "
-              librespeed-cli --no-download  --concurrent 30  --simple --no-icmp --duration "$tts"
-        done
+
 #    fi
     if [[ "$result" -eq 10 ]]; then
         echo -e "traffic is good."
