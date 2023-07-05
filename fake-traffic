@@ -317,14 +317,14 @@ run_base_stats() {
 #        librespeed-cli --no-upload --simple --no-icmp --duration "$tts"
 #    fi
 
-    if [[ "$result" -lt 10 ]]; then
-        #        echo -e "Upload mode"
+#    if [[ "$result" -lt 10 ]]; then
+#        #        echo -e "Upload mode"
 
         while :; do
               echo -e "Run speedtest in upload mode with tts: $tts "
               librespeed-cli --no-download  --concurrent 30  --simple --no-icmp --duration "$tts"
         done
-    fi
+#    fi
     if [[ "$result" -eq 10 ]]; then
         echo -e "traffic is good."
     fi
