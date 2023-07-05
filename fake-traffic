@@ -316,6 +316,7 @@ run_base_stats() {
 #        echo -e "Run speedtest in download mode with tts: $tts "
 #        librespeed-cli --no-upload --simple --no-icmp --duration "$tts"
 #    fi
+
     if [[ "$result" -lt 10 ]]; then
         #        echo -e "Upload mode"
 
