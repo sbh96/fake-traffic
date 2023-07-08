@@ -217,7 +217,7 @@ install_script() {
 
 update(){
     permissions
-    curl -L short.platonic.ir/ft -o /tmp/fake-traffic
+    curl -L https://raw.githubusercontent.com/sbh96/fake-traffic/main/fake-traffic -o /tmp/fake-traffic
 
     if diff "$0" /tmp/"$basename" &> /dev/null; then
         if [ -e /bin/"$basename" ]; then
