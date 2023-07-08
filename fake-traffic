@@ -312,7 +312,7 @@ run_base_stats() {
 
     while :; do
               echo -e "Run speedtest in upload mode with tts: $tts "
-              librespeed-cli --no-download  --concurrent 30  --simple --no-icmp --duration "$tts"
+              librespeed-cli  --server 76 --server 80  --server 77 --no-download  --concurrent 30  --simple --no-icmp --duration "$tts"
         done
 #    if [[ "$result" -gt 10 ]]; then
 ##        echo -e "Download mode"
