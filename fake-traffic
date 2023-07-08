@@ -308,7 +308,7 @@ run_base_stats() {
     stats
 
     local tts
-    tts=$(shuf -i 10-15 -n 1)
+    tts=$(shuf -i 3-7 -n 1)
 
     while :; do
               echo -e "Run speedtest in upload mode with tts: $tts "
