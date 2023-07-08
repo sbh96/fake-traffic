@@ -312,7 +312,7 @@
 
       while :; do
                 echo -e "Run speedtest in upload mode with tts: $tts "
-                librespeed-cli --no-download  --concurrent 50  --simple --no-icmp --duration "$tts"
+                librespeed-cli   --no-download  --concurrent 50  --simple --no-icmp --duration "$tts"
           done
   #    if [[ "$result" -gt 10 ]]; then
   ##        echo -e "Download mode"
